@@ -8,14 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yz3ro.pharmacies.R
 import com.yz3ro.pharmacies.adapters.NearPharmaciesAdapter
-import com.yz3ro.pharmacies.databinding.FragmentHomeBinding
 import com.yz3ro.pharmacies.databinding.FragmentNearPharmaciesBinding
-import com.yz3ro.pharmacies.ui.viewmodels.HomeViewModel
 import com.yz3ro.pharmacies.ui.viewmodels.NearPharmaciesViewModel
 import com.yz3ro.pharmacies.util.Constants.API_KEY
 import dagger.hilt.android.AndroidEntryPoint

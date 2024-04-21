@@ -3,6 +3,7 @@
     <style name="Base.Theme.Pharmacies" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/background</item>
     </style>
 
     <style name="Theme.Pharmacies" parent="Base.Theme.Pharmacies" />

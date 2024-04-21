@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background"
         tools:context=".ui.fragments.HomeFragment">
 
         <TextView
@@ -23,12 +24,25 @@
 
         <Button
             android:id="@+id/btnLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="161dp"
-            android:text="yakınımdaki eczaneler"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="@color/button"
+            android:text="nöbetçi eczaneler"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pharmacy" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

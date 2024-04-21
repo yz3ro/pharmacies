@@ -1,13 +1,15 @@
 package com.yz3ro.pharmacies.adapters
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.yz3ro.pharmacies.data.entity.Pharmacy
 import com.yz3ro.pharmacies.databinding.ItemPharmacyBinding
-import javax.inject.Singleton
+
 
 
 class NearPharmaciesAdapter(var mContext: Context,var pharmacyList : List<Pharmacy>) : RecyclerView.Adapter<NearPharmaciesAdapter.MyViewHolder>() {
@@ -26,7 +28,20 @@ class NearPharmaciesAdapter(var mContext: Context,var pharmacyList : List<Pharma
         t.pharmacyAdress.text = pharmacy.address
         t.pharmacyPhoneNumber.text = pharmacy.phone
         t.pharmacyDistrict.text = pharmacy.district
-
+        t.pharmacyMaps.setOnClickListener {
+            val latitude = pharmacy.latitude
+            val longitude = pharmacy.longitude
+            val gmmIntentUri = Uri.parse("google.navigation:q=$latitude,$longitude")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            if (mapIntent.resolveActivity(mContext.packageManager) != null) {
+                mContext.startActivity(mapIntent)
+            } else {
+                // Google Maps uygulaması yoksa, tarayıcıda aç
+                val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://maps.google.com/?q=$latitude,$longitude"))
+                mContext.startActivity(webIntent)
+            }
+        }
     }
 
     override fun getItemCount(): Int = pharmacyList.size

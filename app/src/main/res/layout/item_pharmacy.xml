@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/background">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -13,7 +14,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/itembackground">
 
             <TextView
                 android:id="@+id/pharmacyName"
@@ -23,6 +25,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/pharmacyMaps"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +38,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/pharmacyMaps"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pharmacyName" />
@@ -48,6 +52,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/pharmacyMaps"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -59,6 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
+                android:backgroundTint="@color/button"
                 android:text="Git"
                 app:layout_constraintBottom_toBottomOf="@+id/pharmacyPhoneNumber"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +78,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
                 android:text="TextView"
+                android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/pharmacyMaps"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/pharmacyAdress" />
