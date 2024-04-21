@@ -41,6 +41,6 @@ This Kotlin-based Android application is a mobile app that fetches nearby pharma
 
 ## Screenshots
 
-![Screenshot](screens/home.png)
-![Screenshot](screens/pharmacies.png)
+![Screenshot](Screenshot/home.png)
+![Screenshot](Screenshot/pharmacies.png)
 
